@@ -221,6 +221,7 @@
         if (!ok) {
           charactersOutputElement.innerHTML = `<b>Characters: </b>Error`;
           pixelsOutputElement.innerHTML = `<b>"Pixels": </b>Error`;
+          bixelsOutputElement.innerHTML = `<b>"Bixels": </b>Error`;
           return;
         }
 
@@ -228,7 +229,7 @@
         const y = Math.round((64 * sizeY.value - 20) / (9 * scale));
         charactersOutputElement.innerHTML = `<b>Characters: </b>${x} x ${y}`;
         pixelsOutputElement.innerHTML = `<b>"Pixels": </b>${x * 2} x ${y * 3}`;
-        bixelsOutputElement.innerHTML = `<b>"Pixels": </b>${x} x ${Math.floor(y * 1.5)}`;
+        bixelsOutputElement.innerHTML = `<b>"Bixels": </b>${x} x ${Math.floor(y * 1.5)}`;
       }
 
       recalculate();
