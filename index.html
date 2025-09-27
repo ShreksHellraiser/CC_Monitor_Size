@@ -175,6 +175,7 @@
       <output>
         <p id="chars"><b>Characters: </b></p>
         <p id="pixels"><b>"Pixels": </b></p>
+        <p id="bixels"><b>"Bixels": </b></p>
       </output>
 
       <hr />
@@ -187,6 +188,7 @@
       const sizeYElement = document.querySelector('#sizeY');
       const charactersOutputElement = document.querySelector('#chars');
       const pixelsOutputElement = document.querySelector('#pixels');
+      const bixelsOutputElement = document.querySelector('#bixels');
       const scaleButtons = document.querySelectorAll('button');
       let scale = 1;
 
@@ -226,6 +228,7 @@
         const y = Math.round((64 * sizeY.value - 20) / (9 * scale));
         charactersOutputElement.innerHTML = `<b>Characters: </b>${x} x ${y}`;
         pixelsOutputElement.innerHTML = `<b>"Pixels": </b>${x * 2} x ${y * 3}`;
+        bixelsOutputElement.innerHTML = `<b>"Pixels": </b>${x} x ${Math.floor(y * 1.5)}`;
       }
 
       recalculate();
